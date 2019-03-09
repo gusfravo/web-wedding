@@ -1,0 +1,12 @@
+/* You can add global styles to this file, and also import other style files */
+@font-face
+{
+   font-family: "Calligraphy";
+   src: url("/assets/font/ChristmasWish-Calligraphy.otf") format("OpenType");
+}
+@font-face
+{
+   font-family: "Rochester";
+   src: url("/assets/font/Rochester-Regular.ttf") format("truetype");
+   https://fonts.google.com/specimen/Rochester
+}

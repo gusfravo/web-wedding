@@ -1,0 +1,110 @@
+<div class="background_wedding">
+  <div class="row justify-content-center">
+    <!-- diseño web -->
+    <div class="col-11 col-lg-10">
+      <div class="card-body-wedding" *ngIf="metadata.viewInitial || metadata.viewInvitation">
+        <div class="flor-esquina-der" >
+          <img src="assets/img/flores-02.png" alt="flores-02">
+        </div>
+        <div class="flor-esquina-izq" *ngIf="metadata.viewInitial">
+          <img src="assets/img/flores-01.png" alt="flores-01">
+        </div>
+        <div class="flor-esquina-izq" *ngIf="!metadata.viewInitial">
+          <img src="assets/img/flor-09.png" alt="flores-01" style="width: 100px !important;">
+        </div>
+        <div class="main-title-wedding fadeIN"  *ngIf="metadata.viewInitial">
+          <h1 class="ribbon">Familia ó Amigos</h1>
+          <span style="  font-family: Calligraphy; color: #ac8400;">Maleny & Gustavo</span>
+          <span style="font-size: 10pt;font-style: italic; display: inherit; font-family: Rochester; color: #9E9E9E;">Nuestra Boda</span>
+          <button type="button" class="btn btn-link open_wedding" (click)="open();">Abrir</button>
+
+          <!-- <button type="button" class="btn open_wedding" (click)="open();"></button> -->
+        </div>
+        <div class=" fadeIN"  *ngIf="metadata.viewInvitation">
+
+          <div class="row justify-content-center">
+            <div class="ribbon2 ribbon2-top-right" style="cursor:pointer" (click)="viewPase();"><span>Confirma tu asistencia <br> click aqui</span></div>
+            <!-- <div class="col-12">
+              <img src="assets/img/flor-05.png" alt="" width="50">
+              <img src="assets/img/flor-06.png" alt="" width="50">
+              <img src="assets/img/flor-05.png" alt="" width="50">
+              <img src="assets/img/flor-06.png" alt="" width="50">
+              <img src="assets/img/flor-05.png" alt="" width="50">
+              <img src="assets/img/flor-06.png" alt="" width="50">
+            </div> -->
+            <div class="col-lg-9 col-11" style="text-align:justify; margin-top: 40px;">
+              <span class="title" style="  font-family: Calligraphy; color: #ac8400;">Maleny & Gustavo</span>
+              <p style="text-align: justify;" class="text_main col-lg-12 col-10 pt-2">Ven a acompañarnos en el momento de gozo máximo,
+                ¡la celebración de nuestra boda!” Después de mucho tiempo de encontrar
+                en el otro, al mejor amigo y a un alma gemela, ahora tenemos el
+                honor de invitarte a que seas parte de la unión entre dos corazones
+                que se aman y que emprenderán un viaje lleno de aventura, respeto y mucho amor.</p>
+
+            </div>
+            <div class="col-12 text_main_sub" style="text-align: center;">
+              <span>Con la bendición de Dios y nuestros padres.</span> <br>
+            </div>
+            <div class="col-10">
+              <div class="row justify-content-between text_main_sub">
+                <div class="" class="name_parents col-6">
+                  Concepción E. Perez Bohorquez
+                </div>
+                <div class="" class="name_parents col-6" style="text-align: right;">
+                  Avelina A. Zaragoza Sanchez.
+                </div>
+                <div class="name_parents col-6">
+                  <br>
+                   Efrain Solano Alinarez.
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-8 col-12 text_main_sub" style="text-align: center;">
+              Nos sería grato contar con su presencia en la ceremonia religiosa, que se llevará a cabo el día sábado.
+            </div>
+            <div class="col-lg-6 col-12 text_main_sub" style="text-align: center;">
+              <span style="color: #de3e74;">04 / Mayo / 2019 </span><br>
+              “Parroquia de San Matías Jalatlaco” <br>
+              12:00hrs.
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="asitence_card"  *ngIf="metadata.viewPase">
+        <div class="row justify-content-center">
+          <div class="asistence_flor">
+            <img src="assets/img/flores-02.png" alt="flores-02">
+          </div>
+          <div class="col-8" style="padding-top: 30px;text-align: center; font-family:Rochester;">
+            <span style="color: #de3e74; font-size: 17pt;"> Le agradecemos confirmar su asistencia </span><br>
+            <span>Via e-mail: <a href="mailto:boda-mg@thavz.com">boda-mg@thavz.com</a>  <br>
+              Via Whatsapp: <a href="tel:9512828601">951 282 86 01</a> <br> <a href="tel:9512549242">951 254 92 42</a>
+              <br>
+              Mesa de Regalos: <br>
+              Nº de evento: 50070990(Liverpool) <br><br>
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="pases_card" *ngIf="metadata.viewPase">
+        <div class="row justify-content-center">
+          <div class="asistence_flor">
+            <img src="assets/img/flores-02.png" alt="flores-02">
+          </div>
+          <div class="col-8" style="padding-top: 30px;text-align: center; font-family:Rochester; padding-bottom: 40px;">
+            <span>
+              <br>
+              Posteriormente los esperamos para la ceremonia civil y recepción en la quinta "El Tremolin",
+              San Agustin Yatareni Km. 07 Sta Lucia del Camino, Oaxaca.
+              <br>
+            </span>
+            <span style="color: #de3e74; font-size: 14pt;"> <br> Pase para ( 0 ) personas <br></span>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
