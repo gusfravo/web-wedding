@@ -1,0 +1,40 @@
+<div class="login">
+  <div class="login2"></div>
+  <div class="row justify-content-center">
+    <div class="col-lg-4 col-md-4 col-sm-8 col-xs-8 mt-4">
+      <mat-card>
+        <mat-card-title>
+          <!-- <img alt="STI" src="./assets/images/Logo_STI_Vertical.png" class="rounded mx-auto d-block" width="350px" /> -->
+        </mat-card-title>
+        <hr style="margin-left:20%; margin-right:20%;">
+        <mat-card-content>
+          <form class="col login-form">
+              <h2 class="col-12 text-center">
+                Login
+              </h2>
+              <mat-form-field class="col-12">
+                <input matInput placeholder="Usuario" name="mName" [(ngModel)]="object.username" [formControl]="complexForm.controls['username']" >
+                <mat-error *ngIf="complexForm.controls['username'].hasError('required')">
+                  Campo <strong>requerido</strong>.
+                </mat-error>
+              </mat-form-field>
+
+              <mat-form-field class="col-12">
+                <input matInput type="password" placeholder="Password" name="mPassword" [(ngModel)]="object.password" [formControl]="complexForm.controls['password']">
+                <mat-error *ngIf="complexForm.controls['password'].hasError('required')">
+                  Campo <strong>requerido</strong>.
+                </mat-error>
+              </mat-form-field>
+              <br />
+              <div class="button-row">
+                <button class="col-12 login-button" mat-button (click)="login(object);" [disabled]="object.password == '' || object.username == ''">Ingresar</button>
+              </div>
+          </form>
+        </mat-card-content>
+        <!-- <mat-card-footer class="text-right mb-1">
+          <a mat-button routerLink="/restore/password">¿Olvide contraseña?</a>
+        </mat-card-footer> -->
+      </mat-card>
+    </div>
+  </div>
+</div>
