@@ -15,10 +15,10 @@ export let Urls: Array<{ code: string, url: string }> = [
     code: "invitation:list",
     url: "invitation/list"
   },{
-    code: "hotels:all",
-    url: "hotels/all"
+    code: "invitation:get",
+    url: "invitation/get"
   },{
-    code: "hotels:list",
-    url: "hotels/list"
+    code: "guests:findAllByInvitation",
+    url: "guests/findAllByInvitation"
   }
 ];

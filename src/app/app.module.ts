@@ -39,6 +39,7 @@ import {
   MatNativeDateModule,
   MatRippleModule
 } from '@angular/material';
+import 'hammerjs';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
@@ -48,7 +49,7 @@ import { AdminComponent } from './admin/admin.component';
 import { ToolBarComponent } from './tool-bar/tool-bar.component';
 import { AdminInvitationComponent } from './admin/admin-invitation/admin-invitation.component';
 import { LoginComponent } from './login/login.component';
-import 'hammerjs';
+import { AdminGuestsComponent } from './admin/admin-guests/admin-guests.component';
 
 const appRoutes:Routes=[
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -56,6 +57,7 @@ const appRoutes:Routes=[
   { path: 'login', component: LoginComponent},
   { path: 'admin', canActivate:[AuthenticationGuard], component: AdminComponent },
   { path: 'admin/invitation', canActivate:[AuthenticationGuard], component: AdminInvitationComponent },
+  { path: 'admin/invitation/guests/:id', canActivate:[AuthenticationGuard], component: AdminGuestsComponent },
 
 ];
 @NgModule({
@@ -65,7 +67,8 @@ const appRoutes:Routes=[
     AdminComponent,
     ToolBarComponent,
     AdminInvitationComponent,
-    LoginComponent
+    LoginComponent,
+    AdminGuestsComponent
   ],
   imports: [
     BrowserModule,

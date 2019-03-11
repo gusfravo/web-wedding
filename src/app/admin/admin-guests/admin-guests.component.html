@@ -3,10 +3,10 @@
   <div class="col-11">
       <div class="row justify-content-between p-4">
           <div class="col-6">
-              <span class="admin-title">Invitaciones</span>
+              <span class="admin-title">Invitados de {{object.name}}</span>
           </div>
           <div class="col-6" style="    text-align: right;">
-              <button mat-button color="primary"> <i class="material-icons">add</i>Agregar un invitación</button>
+              <button mat-button color="primary"> <i class="material-icons">add</i>Agregar un invitado</button>
           </div>
       </div>
       <div class="row justify-content-center">
@@ -20,10 +20,10 @@
                   </thead>
       
                   <tbody>
-                    <tr *ngFor="let object of invitations">
+                    <tr *ngFor="let object of guestList">
                       <td>{{ object.name }}</td>
                       <td>
-                        <button mat-icon-button color="primary" matTooltip="Listado de invitados" routerLink="/admin/invitation/guests/{{object.id}}" >
+                        <button mat-icon-button color="primary" matTooltip="Listado de invitados" >
                           <i class="material-icons">format_list_bulleted</i>
                         </button>
                       </td>
