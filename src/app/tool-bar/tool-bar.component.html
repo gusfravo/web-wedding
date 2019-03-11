@@ -1,3 +1,15 @@
-<p>
-  tool-bar works!
-</p>
+<mat-toolbar>
+  <mat-toolbar-row>
+    <span>Administrador</span>
+    <span>    
+      <button mat-button color="primary" routerLink="/admin/invitation" matTooltip="Abrir listado de invitaciones" >Invitaciones</button>
+    </span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button routerLink="/admin" matTooltip="Ir al dashboard" >
+      <mat-icon aria-label="Example icon-button with a heart icon">home</mat-icon>
+    </button>
+    <button mat-icon-button  matTooltip="Salir"    >
+      <mat-icon aria-label="Example icon-button with a heart icon">exit_to_app</mat-icon>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>

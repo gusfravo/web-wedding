@@ -11,3 +11,37 @@
    src: url("/assets/font/Rochester-Regular.ttf") format("truetype");
    https://fonts.google.com/specimen/Rochester
 }
+/* Estilos que elimina el focus*/
+button.mat-icon-button{
+   outline: none;
+}
+button.mat-button{
+   outline: none;
+}
+
+ /*Estilos de tablas*/
+ .table td, .table th {
+   border-top: none;
+   font-weight: 100;
+}
+.table{
+  font-size: 1vw;
+}
+.custom-card-header{
+  float: left;
+  background: #005c9c;
+  box-shadow: 0 4px 20px 0px rgba(0, 0, 0, 0.14), 0 7px 10px -5px rgba(255, 127, 91, 0.4);
+  /* margin: -35px 15px 0; */
+  top: -35px;
+  left: -20px;
+  border-radius: 3px;
+  padding: 15px;
+  position: relative;
+  color: #f1f4f9;
+}
+.mat-divider {
+  border-top-color: rgba(187, 186, 186, 0.12);
+}
+.mat-tab-group.mat-primary .mat-ink-bar, .mat-tab-nav-bar.mat-primary .mat-ink-bar{
+  background-color: #005c9c!important;
+}

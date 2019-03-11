@@ -1,0 +1,16 @@
+.admin-title{
+    font-weight: 300;
+    font-size: 14pt;
+    padding: 5px;
+}
+.admin_panel_message{
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+    height: 100vh;
+    font-size: -webkit-xxx-large;
+}
+.bajorrelieve {
+    color:#eeeeee;
+    text-shadow: -1px -2px #cccccc;
+}
