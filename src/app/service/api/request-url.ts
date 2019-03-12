@@ -20,5 +20,11 @@ export let Urls: Array<{ code: string, url: string }> = [
   },{
     code: "guests:findAllByInvitation",
     url: "guests/findAllByInvitation"
+  },{
+    code: "guests:update",
+    url: "guests/update"
+  },{
+    code: "guests:get",
+    url: "guests/get"
   }
 ];

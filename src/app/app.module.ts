@@ -50,6 +50,7 @@ import { ToolBarComponent } from './tool-bar/tool-bar.component';
 import { AdminInvitationComponent } from './admin/admin-invitation/admin-invitation.component';
 import { LoginComponent } from './login/login.component';
 import { AdminGuestsComponent } from './admin/admin-guests/admin-guests.component';
+import { AdminGuestUpdateComponent } from './admin/admin-guest-update/admin-guest-update.component';
 
 const appRoutes:Routes=[
   { path: '', redirectTo: 'home', pathMatch: 'full'},
@@ -58,6 +59,8 @@ const appRoutes:Routes=[
   { path: 'admin', canActivate:[AuthenticationGuard], component: AdminComponent },
   { path: 'admin/invitation', canActivate:[AuthenticationGuard], component: AdminInvitationComponent },
   { path: 'admin/invitation/guests/:id', canActivate:[AuthenticationGuard], component: AdminGuestsComponent },
+  { path: 'admin/invitation/:idInvitation/guest/update/:id', canActivate:[AuthenticationGuard], component: AdminGuestUpdateComponent },
+
 
 ];
 @NgModule({
@@ -68,7 +71,8 @@ const appRoutes:Routes=[
     ToolBarComponent,
     AdminInvitationComponent,
     LoginComponent,
-    AdminGuestsComponent
+    AdminGuestsComponent,
+    AdminGuestUpdateComponent
   ],
   imports: [
     BrowserModule,

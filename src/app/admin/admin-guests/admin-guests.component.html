@@ -6,7 +6,7 @@
               <span class="admin-title">Invitados de {{object.name}}</span>
           </div>
           <div class="col-6" style="    text-align: right;">
-              <button mat-button color="primary"> <i class="material-icons">add</i>Agregar un invitado</button>
+              <button mat-button color="primary" routerLink="/admin/invitation/{{object.id}}/guest/update/new"> <i class="material-icons">add</i>Agregar un invitado</button>
           </div>
       </div>
       <div class="row justify-content-center">
@@ -15,16 +15,26 @@
                   <thead class="header-table">
                     <tr>
                       <th class="">Nombre</th>
+                      <th class="">Adultos</th>
+                      <th class="">Niños</th>
+                      <th class="">Total</th>
+                      <th class="">Invitacion Abierta</th>
+                      <th class="">Invitacion Confirmada</th>
                       <th class="">Acciones</th>
                     </tr>
                   </thead>
       
                   <tbody>
-                    <tr *ngFor="let object of guestList">
-                      <td>{{ object.name }}</td>
+                    <tr *ngFor="let guest of guestList">
+                      <td>{{ guest.name }}</td>
+                      <td>{{ guest.adults }}</td>
+                      <td>{{ guest.children }}</td>
+                      <td>{{ guest.numberInPary }}</td>
+                      <td>{{ guest.invitationOpen }}</td>
+                      <td>{{ guest.confirmed }}</td>
                       <td>
-                        <button mat-icon-button color="primary" matTooltip="Listado de invitados" >
-                          <i class="material-icons">format_list_bulleted</i>
+                        <button mat-icon-button color="primary" matTooltip="Editar invitado" routerLink="/admin/invitation/{{object.id}}/guest/update/{{guest.id}}">
+                          <i class="material-icons">edit</i>
                         </button>
                       </td>
                     </tr>

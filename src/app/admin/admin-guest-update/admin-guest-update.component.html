@@ -1,0 +1,53 @@
+<app-tool-bar></app-tool-bar>
+<div class="row justify-content-center">
+  <div class="col-11">
+    <div class="row justify-content-between p-4">
+      <div class="col-6">
+        <span class="admin-title">Crear invitado</span>
+      </div>
+      <div class="col-6" style="    text-align: right;">
+        <button mat-button color="primary" routerLink="/admin/invitation/guests/{{metadata.invitation.id}}"> <i
+            class="material-icons">keyboard_arrow_left</i>Regresar</button>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-10">
+        <div class="row">
+            <div class="col-6">
+                <mat-form-field class="col-12">
+                  <input matInput placeholder="Nombre" [(ngModel)]="object.name" [formControl]="complexForm.controls['name']" name="mName" autocomplete="off">
+                  <mat-error *ngIf="complexForm.controls['name'].hasError('required')">
+                    El código es <strong>requerido</strong>
+                  </mat-error>
+                </mat-form-field>
+                <section class="col-12">
+                    <mat-checkbox class="example-margin" [(ngModel)]="object.guestOfBride">Inivtado del Novio</mat-checkbox>
+                    <mat-checkbox class="example-margin" [(ngModel)]="object.guestOfGroom">Invitado de la Novia</mat-checkbox>
+                  </section>
+              </div>
+              <div class="col-6">
+                  <mat-form-field class="col-6">
+                      <input matInput placeholder="Cuantos Adultos" [(ngModel)]="object.adults"
+                        [formControl]="complexForm.controls['adults']" name="madults" autocomplete="off">
+                      <mat-error *ngIf="complexForm.controls['adults'].hasError('required')">
+                        El código es <strong>requerido</strong>
+                      </mat-error>
+                    </mat-form-field>
+                    <mat-form-field class="col-6">
+                      <input matInput placeholder="Cuantos Niños" [(ngModel)]="object.children"
+                        [formControl]="complexForm.controls['children']" name="mchildren" autocomplete="off">
+                      <mat-error *ngIf="complexForm.controls['children'].hasError('required')">
+                        El código es <strong>requerido</strong>
+                      </mat-error>
+                    </mat-form-field>
+              </div>
+        </div>
+        <div class="row justify-content-end">
+          <div class="col-4">
+              <button mat-raised-button color="primary" (click)="send();" [disabled]="object.name == '' || object.adults == 0">Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

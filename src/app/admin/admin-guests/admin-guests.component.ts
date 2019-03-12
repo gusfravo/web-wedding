@@ -50,7 +50,7 @@ export class AdminGuestsComponent implements OnInit {
   findAllGuestsByInvitation(){
     this.session.postRequest("guests:findAllByInvitation",this.guestMin).subscribe((data:any)=>{
       this.guestList = data.object.instanceList;
-      console.log(this.guestList);
+      // console.log(this.guestList);
     },error=>{
       console.log("Error:guests:findAllByInvitation",error);
     })
