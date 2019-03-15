@@ -4,4 +4,4 @@ function isConnetion()
     return window.location.hostname.indexOf('nuestraboda.thavz.com') == 0;
 }
 
-export let SERVER_URL = isConnetion() ? "http://127.0.0.1:8000/api/" : "http://127.0.0.1:8000/api/";
+export let SERVER_URL = isConnetion() ? "http://thavz.com/backendWedding/api/" : "http://thavz.com/backendWedding/api/";
