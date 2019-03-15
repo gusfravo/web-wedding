@@ -13,10 +13,10 @@
           <img src="assets/img/flor-09.png" alt="flores-01" style="width: 100px !important;">
         </div>
         <div class="main-title-wedding fadeIN"  *ngIf="metadata.viewInitial">
-          <h1 class="ribbon">Familia ó Amigos</h1>
+          <h1 class="ribbon">{{object.name}}</h1>
           <span style="  font-family: Calligraphy; color: #ac8400;">Maleny & Gustavo</span>
           <span style="font-size: 10pt;font-style: italic; display: inherit; font-family: Rochester; color: #9E9E9E;">Nuestra Boda</span>
-          <button type="button" class="btn btn-link open_wedding" (click)="open();">Abrir</button>
+          <button type="button" class="btn btn-link open_wedding" (click)="open();" [disabled]="object.id == ''">Abrir</button>
 
           <!-- <button type="button" class="btn open_wedding" (click)="open();"></button> -->
         </div>
@@ -64,7 +64,7 @@
             </div>
             <div class="col-lg-6 col-12 text_main_sub" style="text-align: center;">
               <span style="color: #de3e74;">04 / Mayo / 2019 </span><br>
-              “Parroquia de San Matías Jalatlaco” <br>
+              “Parroquia de Nuestra Señora de los Pobres” <br>
               12:00hrs.
             </div>
           </div>
@@ -82,8 +82,9 @@
             <span>Via e-mail: <a href="mailto:boda-mg@thavz.com">boda-mg@thavz.com</a>  <br>
               Via Whatsapp: <a href="tel:9512828601">951 282 86 01</a> <br> <a href="tel:9512549242">951 254 92 42</a>
               <br>
+              <button style="font-family: Rochester; color: #e03b73;font-size: larger;" mat-button (click)="confirmed();" *ngIf="!object.confirmed">Confirma aqui <i class="material-icons">touch_app</i></button> <br>
               Mesa de Regalos: <br>
-              Nº de evento: 50070990(Liverpool) <br><br>
+              Nº de evento: <a href="https://mesaderegalos.liverpool.com.mx/milistaderegalos/50070990">50070990</a>(Liverpool) <br><br>
             </span>
           </div>
         </div>
@@ -100,11 +101,26 @@
               San Agustin Yatareni Km. 07 Sta Lucia del Camino, Oaxaca.
               <br>
             </span>
-            <span style="color: #de3e74; font-size: 14pt;"> <br> Pase para ( 0 ) personas <br></span>
-
+            <span style="color: #de3e74; font-size: 14pt;"> <br> Pase para ( {{object.numberInPary}} ) personas <br></span>
           </div>
         </div>
       </div>
+      <!-- <div class="pases_card mt-3" *ngIf="metadata.viewPase">
+        <div class="row justify-content-center">
+          <div class="asistence_flor">
+            <img src="assets/img/flores-02.png" alt="flores-02">
+          </div>
+          <div class="col-8" style="padding-top: 30px;text-align: center; font-family:Rochester; padding-bottom: 40px;">
+            <a  href="https://t.me/joinchat/AAAAAEkPfzHpACcdIZwp7g" *ngIf="metadata.viewPase">
+              <div class="">
+                <img src="assets/img/telegram.gif" alt="telegram" width="100">
+              </div>
+              <span><i class="material-icons">touch_app</i></span>
+            </a>
+          </div>
+        </div>
+      </div> -->
+
     </div>
   </div>
 </div>

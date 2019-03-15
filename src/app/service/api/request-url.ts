@@ -26,5 +26,14 @@ export let Urls: Array<{ code: string, url: string }> = [
   },{
     code: "guests:get",
     url: "guests/get"
+  },{
+    code: "guests:findGuestByNameAndInvitation",
+    url: "guests/findGuestByNameAndInvitation"
+  },{
+    code: "guests:opened",
+    url: "guests/opened"
+  },{
+    code: "guests:confirmed",
+    url: "guests/confirmed"
   }
 ];

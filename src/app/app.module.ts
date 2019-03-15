@@ -51,16 +51,17 @@ import { AdminInvitationComponent } from './admin/admin-invitation/admin-invitat
 import { LoginComponent } from './login/login.component';
 import { AdminGuestsComponent } from './admin/admin-guests/admin-guests.component';
 import { AdminGuestUpdateComponent } from './admin/admin-guest-update/admin-guest-update.component';
+import { ConfirmedInvitationComponent } from './home/confirmed-invitation/confirmed-invitation.component';
 
 const appRoutes:Routes=[
   { path: '', redirectTo: 'home', pathMatch: 'full'},
-  { path: 'home', component: HomeComponent},
+  { path: 'home/:invitationId/:name', component: HomeComponent},
+  { path: 'home/congratulations', component: ConfirmedInvitationComponent},
   { path: 'login', component: LoginComponent},
   { path: 'admin', canActivate:[AuthenticationGuard], component: AdminComponent },
   { path: 'admin/invitation', canActivate:[AuthenticationGuard], component: AdminInvitationComponent },
   { path: 'admin/invitation/guests/:id', canActivate:[AuthenticationGuard], component: AdminGuestsComponent },
   { path: 'admin/invitation/:idInvitation/guest/update/:id', canActivate:[AuthenticationGuard], component: AdminGuestUpdateComponent },
-
 
 ];
 @NgModule({
@@ -72,11 +73,12 @@ const appRoutes:Routes=[
     AdminInvitationComponent,
     LoginComponent,
     AdminGuestsComponent,
-    AdminGuestUpdateComponent
+    AdminGuestUpdateComponent,
+    ConfirmedInvitationComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule, 
+    FormsModule,
     ReactiveFormsModule,
     HttpModule,
     BrowserAnimationsModule,
