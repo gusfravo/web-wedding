@@ -69,8 +69,8 @@ export class AdminGuestUpdateComponent implements OnInit {
     console.log(this.object);
     //creamos la URL
     this.object.url = 'http://nuestraboda.thavz.com/#/home/'+this.metadata.invitation.id+'/'+this.object.name.replace(/ /g, "_");
-    this.object.confirmedDate = moment(this.object.confirmedDate).format('MM-DD-YYYY hh:mm:ss') 
-    this.object.openedDate = moment(this.object.openedDate).format('MM-DD-YYYY hh:mm:ss') 
+    this.object.confirmedDate = moment(this.object.confirmedDate).format('YYYY-MM-DD hh:mm:ss') 
+    this.object.openedDate = moment(this.object.openedDate).format('YYYY-MM-DD hh:mm:ss')
     this.object.numberInPary = parseFloat(this.object.adults) + parseFloat(this.object.children);
     this.object.invitation.id = this.metadata.invitation.id;
     this.session.postRequest("guests:update",this.object).subscribe((data:any)=>{
