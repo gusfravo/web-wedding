@@ -12,10 +12,10 @@
         <div class="flor-esquina-izq" *ngIf="!metadata.viewInitial">
           <img src="assets/img/flor-09.png" alt="flores-01" style="width: 100px !important;">
         </div>
-        <div class="main-title-wedding fadeIN"  *ngIf="metadata.viewInitial">
+        <div class="main-title-wedding fadeIN"  style="    line-height: 1.2;" *ngIf="metadata.viewInitial">
           <h1 class="ribbon">{{object.name}}</h1>
-          <span style="  font-family: Calligraphy; color: #ac8400;">Maleny & Gustavo</span>
-          <span style="font-size: 10pt;font-style: italic; display: inherit; font-family: Rochester; color: #9E9E9E;">Nuestra Boda</span>
+          <span style="font-size: 15pt;font-style: italic; display: inherit; font-family: Rochester; color: #E91E63;">Nuestra Boda</span>
+          <span style="  font-family: Calligraphy; color: #ac8400; line-height: .5; !important">Maleny & Gustavo</span> <br>
           <button type="button" class="btn btn-link open_wedding" (click)="open();" [disabled]="object.id == ''">Abrir</button>
 
           <!-- <button type="button" class="btn open_wedding" (click)="open();"></button> -->
@@ -23,7 +23,9 @@
         <div class=" fadeIN"  *ngIf="metadata.viewInvitation">
 
           <div class="row justify-content-center">
-            <div class="ribbon2 ribbon2-top-right" style="cursor:pointer" (click)="viewPase();"><span>Confirma tu asistencia <br> click aqui</span></div>
+            <div class="ribbon2 ribbon2-top-right" style="cursor:pointer z-index: 100000;" (click)="viewPase();">
+              <span *ngIf="!object.confirmed">Confirma tu asistencia <br><i class="material-icons">touch_app</i></span>
+              <span *ngIf="object.confirmed">Ver detalles  <br><i class="material-icons">touch_app</i></span></div>
             <!-- <div class="col-12">
               <img src="assets/img/flor-05.png" alt="" width="50">
               <img src="assets/img/flor-06.png" alt="" width="50">
@@ -32,9 +34,9 @@
               <img src="assets/img/flor-05.png" alt="" width="50">
               <img src="assets/img/flor-06.png" alt="" width="50">
             </div> -->
-            <div class="col-lg-9 col-11" style="text-align:justify; margin-top: 40px;">
+            <div class="col-lg-9 col-11" style="text-align:justify; margin-top: 60px;">
               <span class="title" style="  font-family: Calligraphy; color: #ac8400;">Maleny & Gustavo</span>
-              <p style="text-align: justify;" class="text_main col-lg-12 col-10 pt-2">Ven a acompañarnos en el momento de gozo máximo,
+              <p style="text-align: justify;" class="text_main col-lg-12 col-11 pt-2">Ven a acompañarnos en el momento de gozo máximo,
                 ¡la celebración de nuestra boda!” Después de mucho tiempo de encontrar
                 en el otro, al mejor amigo y a un alma gemela, ahora tenemos el
                 honor de invitarte a que seas parte de la unión entre dos corazones
@@ -77,8 +79,11 @@
           <div class="asistence_flor">
             <img src="assets/img/flores-02.png" alt="flores-02">
           </div>
-          <div class="col-8" style="padding-top: 30px;text-align: center; font-family:Rochester;">
-            <span style="color: #de3e74; font-size: 17pt;"> Le agradecemos confirmar su asistencia </span><br>
+          <div class="col-8" style="padding-top: 100px;text-align: center; font-family:Rochester;">
+            <span style="color: #de3e74; font-size: 17pt; line-height: .4;">
+              <span *ngIf="!object.confirmed">Le agradecemos confirmar su asistencia</span>
+              <span *ngIf="object.confirmed">Gracias por confirmar tu asistencia.</span>
+             </span><br>
             <span>Via e-mail: <a href="mailto:boda-mg@thavz.com">boda-mg@thavz.com</a>  <br>
               Via Whatsapp: <a href="tel:9512828601">951 282 86 01</a> <br> <a href="tel:9512549242">951 254 92 42</a>
               <br>
@@ -94,11 +99,16 @@
           <div class="asistence_flor">
             <img src="assets/img/flores-02.png" alt="flores-02">
           </div>
-          <div class="col-8" style="padding-top: 30px;text-align: center; font-family:Rochester; padding-bottom: 40px;">
+          <div class="col-12">
+            <a class="icons-top" href="https://goo.gl/maps/7VndoisTb4q">
+              <img src="assets/img/map.svg" alt="">
+            </a>
+          </div>
+          <div class="col-8" style="padding-top: 60px;text-align: center; font-family:Rochester; padding-bottom: 40px;">
             <span>
               <br>
               Posteriormente los esperamos para la ceremonia civil y recepción en la quinta "El Tremolin",
-              San Agustin Yatareni Km. 07 Sta Lucia del Camino, Oaxaca.
+              San Agustín Yatareni Km. 07 Sta Lucía del Camino, Oaxaca.
               <br>
             </span>
             <span style="color: #de3e74; font-size: 14pt;"> <br> Pase para ( {{object.numberInPary}} ) personas <br></span>

@@ -4,7 +4,7 @@
   width: 100%;
   background-repeat: repeat;
   background-size: 200px;
-  background-color: #f8f4cc;
+  background-color: #f8f6e6;
 }
 
 /* .card-body-wedding > span {
@@ -52,6 +52,7 @@
     width: 70%; */
     /* left: 15%; */
     /* opacity: 0; */
+    border-color: #f77da8;
     transition: all .7s linear;
     /* padding: 10px 20px;
     font-size: 9pt;
@@ -105,7 +106,7 @@
     font-family: Rochester;
     font-weight: 100;
     font-size: 10pt;
-    padding-top:20px;
+    padding-top:10px;
   }
   /* reglas CSS */
   .flor-esquina-der{
@@ -259,7 +260,7 @@
   line-height: 1.875em;
   color: #fff;
   border-radius: 0 0.156em 0.156em 0;
-  background: rgba(241, 146, 173, 0.69);
+  background: rgba(220, 17, 75, 0.69);
   box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.18);
   top: 50px;
 }
@@ -329,7 +330,7 @@
       display: block;
       width: 225px;
       padding: 4px 0;
-      background-color: #af285fb0;
+      background-color: #ce3573cc;
       box-shadow: 0 5px 10px rgba(0,0,0,.1);
       color: #fff;
       /* font: 700 18px/1 'Lato', sans-serif; */
@@ -337,6 +338,7 @@
       /* text-transform: uppercase; */
       text-align: center;
       font-family: Rochester;
+      z-index: 100000;
 }
 
 /* top left*/
@@ -433,4 +435,12 @@
   left: -25px;
   bottom: 30px;
   transform: rotate(-225deg);
+}
+a{
+  color:#cfa674;
+}
+.icons-top{
+  width: 40px;
+    margin: 23px;
+    position: absolute;
 }

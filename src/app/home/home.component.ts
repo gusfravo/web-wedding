@@ -68,7 +68,7 @@ export class HomeComponent implements OnInit {
       this.object.confirmed = true;
       this.session.postRequest("guests:confirmed",this.object).subscribe((data:any)=>{
         this.object = data.object;
-        this.router.navigate(['/home/congratulations']);
+        // this.router.navigate(['/home/congratulations']);
       },error=>{
         console.log("Error:guests:confirmed",error);
       })
