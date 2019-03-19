@@ -10,7 +10,7 @@
           <img src="assets/img/flores-01.png" alt="flores-01">
         </div>
         <div class="flor-esquina-izq" *ngIf="!metadata.viewInitial">
-          <img src="assets/img/flor-09.png" alt="flores-01" style="width: 100px !important;">
+          <img src="assets/img/flor-08.png" alt="flores-01" style="width: 100px !important;">
         </div>
         <div class="main-title-wedding fadeIN"  style="    line-height: 1.2;" *ngIf="metadata.viewInitial">
           <h1 class="ribbon">{{object.name}}</h1>
@@ -73,7 +73,7 @@
 
         </div>
       </div>
-
+      <div *ngIf="metadata.viewPase" style="text-align: center; color: #d0a570; margin-top: 10px; cursor:pointer;"(click)="returnHome();"><i class="material-icons" style="font-size: 3rem;">home</i></div>
       <div class="asitence_card"  *ngIf="metadata.viewPase">
         <div class="row justify-content-center">
           <div class="asistence_flor">
@@ -100,8 +100,9 @@
             <img src="assets/img/flores-02.png" alt="flores-02">
           </div>
           <div class="col-12">
-            <a class="icons-top" href="https://goo.gl/maps/7VndoisTb4q">
-              <img src="assets/img/map.svg" alt="">
+            <a class="icons-top" href="https://goo.gl/maps/7VndoisTb4q" target="_blank" style="text-align: center; font-size: 9pt;">
+              <i class="material-icons">place</i>
+              mapa
             </a>
           </div>
           <div class="col-8" style="padding-top: 60px;text-align: center; font-family:Rochester; padding-bottom: 40px;">
