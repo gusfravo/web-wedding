@@ -112,7 +112,7 @@
               San Agustín Yatareni Km. 07 Sta Lucía del Camino, Oaxaca.
               <br>
             </span>
-            <span style="color: #de3e74; font-size: 14pt;"> <br> Pase para ( {{object.numberInPary}} ) personas <br></span>
+            <span *ngIf="object.numberInPary != 0" style="color: #de3e74; font-size: 14pt;"> <br> Pase para ( {{object.numberInPary}} ) personas <br></span>
           </div>
         </div>
       </div>
