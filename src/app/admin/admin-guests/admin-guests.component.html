@@ -31,8 +31,14 @@
                       <td>{{ guest.adults }}</td>
                       <td>{{ guest.children }}</td>
                       <td>{{ guest.numberInPary }}</td>
-                      <td>{{ guest.invitationOpen }}</td>
-                      <td>{{ guest.confirmed }}</td>
+                      <td>
+                        <span *ngIf="guest.invitationOpen" style="color: #4CAF50;"><i class="material-icons">check_circle_outline</i></span>
+                        <span *ngIf="!guest.invitationOpen" style="color: #FF9800"><i class="material-icons">panorama_fish_eye</i></span>
+                      </td>
+                      <td>
+                        <span *ngIf="guest.confirmed" style="color: #4CAF50;"><i class="material-icons">check_circle_outline</i></span>
+                        <span *ngIf="!guest.confirmed" style="color: #FF9800"><i class="material-icons">panorama_fish_eye</i></span>
+                      </td>
                       <td>{{ guest.url }}</td>
                       <td>
                         <button mat-icon-button color="primary" matTooltip="Editar invitado" routerLink="/admin/invitation/{{object.id}}/guest/update/{{guest.id}}">
