@@ -4,4 +4,4 @@ function isConnetion()
     return window.location.hostname.indexOf('nuestraboda.thavz.com') == 0;
 }
 
-export let SERVER_URL = isConnetion() ? "http://thavz.com/backendWedding/api/" : "http://thavz.com/backendWedding/api/";
+export let SERVER_URL = isConnetion() ? "http://wedding.keysoft.mx/backendWedding/api/" : "http://wedding.keysoft.mx/backendWedding/api/";
